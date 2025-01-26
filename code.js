@@ -20,3 +20,7 @@ function binarySearch(list, element) {
   return -1;
 }
 
+//test case like this won't work despite it giving the correct result.
+console.log(binarySearch([6,6,6],6)); 
+console.log(binarySearch([6,6,6],5)); 
+console.log(binarySearch([6,6,6],8)); 
