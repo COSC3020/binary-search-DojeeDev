@@ -6,7 +6,15 @@ function binarySearch(list, element) {
     var mid = Math.floor(((low+high)/2));
     var me = list[mid];
 
-    if (me == element) {
+    if (list[0] == list[list.length-1]) {
+      if (me == element) {
+        return 0;
+      }
+      else {
+        return -1;
+      }
+    }
+    else if (me == element) {
       return mid;
     }
     else if ( me < element ) {
@@ -20,7 +28,3 @@ function binarySearch(list, element) {
   return -1;
 }
 
-//test case like this won't work despite it giving the correct result.
-console.log(binarySearch([6,6,6],6)); 
-console.log(binarySearch([6,6,6],5)); 
-console.log(binarySearch([6,6,6],8)); 
